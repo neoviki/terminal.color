@@ -1,0 +1,61 @@
+#! /bin/bash
+: '
+   Terminal Color Utility 
+
+    				-->   [ Author ]  Viki (a) Vignesh Natarajan 
+				-->   [ Domain ]  https://vikiworks.io 
+'
+BLACK="\[\033[01;30m\]\u@\h:\w\$" 
+RED="\[\033[01;31m\]\u@\h:\w\$" 
+GREEN="\[\033[01;32m\]\u@\h:\w\$" 
+YELLOW="\[\033[01;33m\]\u@\h:\w\$" 
+BLUE="\[\033[01;34m\]\u@\h:\w\$" 
+PURPLE="\[\033[01;35m\]\u@\h:\w\$" 
+CYAN="\[\033[01;36m\]\u@\h:\w\$" 
+WHITE="\[\033[01;37m\]\u@\h:\w\$" 
+MAROON="\[\033[01;39m\]\u@\h:\w\$" 
+
+usage(){
+    echo
+    echo "Usage: color <color_name>"
+    echo
+    echo
+    echo "Example: color green"
+    echo
+    echo "list of supported colors :"
+    echo
+    echo "	-> black"
+    echo "	-> blue"
+    echo "	-> cyan"
+    echo "	-> green"
+    echo "	-> maroon"
+    echo "	-> purple"
+    echo "	-> red"
+    echo "	-> white"
+    echo "	-> yellow"
+    echo
+    echo
+}
+
+if [ -z "$1" ]; then
+    usage
+    exit 1
+fi
+
+COLOR=$BLACK
+case $1 in
+   black ) 	COLOR=$BLACK; ;;
+   blue ) 	COLOR=$BLUE;  ;;
+   cyan   )  	COLOR=$CYAN;  ;;
+   green  ) 	COLOR=$GREEN; 	;;
+   maroon ) 	COLOR=$MAROON; 	;;
+   purple ) 	COLOR=$PURPLE; 	;;
+   red 	  ) 	COLOR=$RED; 	;;
+   white  ) 	COLOR=$WHITE; 	;;
+   yellow ) 	COLOR=$YELLOW;  ;;
+   *     )	usage; 		exit;;
+esac
+
+
+echo "PS1="\"$COLOR\""" > ~/.bashrc
+bash
