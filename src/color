@@ -57,5 +57,5 @@ case $1 in
 esac
 
 
-echo "PS1="\"$COLOR\""" > ~/.bashrc
+echo "PS1="\"$COLOR\""" >> ~/.bashrc
 bash
