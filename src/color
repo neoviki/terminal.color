@@ -17,9 +17,9 @@ usage(){
     echo "	-> black"
     echo "	-> red"
     echo "	-> green"
-    echo "	-> orange"
+    echo "	-> yellow"
     echo "	-> blue"
-    echo "	-> magenta"
+    echo "	-> pink"
     echo "	-> cyan"
     echo "	-> grey"
     echo "	-> default"
@@ -34,14 +34,15 @@ fi
 
 SET_BG_COLOR(){
     COLOR="$1"
-    echo "PS1=\`printf \"%s\" \"\033[3${COLOR}m\u@\h\$\033[39m\"\`" >> ~/.bashrc
+    #echo "PS1=\`printf \"%s\" \"\033[3${COLOR}m\u@\h\$\033[39m\"\`" >> ~/.bashrc
+    echo  "PS1=\"\[\033[3${COLOR}m\][\u@\h]$ \"" >> ~/.bashrc 
 }
 
 case $1 in
    black ) 	SET_BG_COLOR "0"; ;;
    red ) 	SET_BG_COLOR "1"; ;;
    green ) 	SET_BG_COLOR "2"; ;;
-   orange ) 	SET_BG_COLOR "3"; ;;
+   yellow ) 	SET_BG_COLOR "3"; ;;
    blue ) 	SET_BG_COLOR "4"; ;;
    magenta ) 	SET_BG_COLOR "5"; ;;
    cyan ) 	SET_BG_COLOR "6";  ;;
