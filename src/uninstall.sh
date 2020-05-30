@@ -49,5 +49,12 @@ check_installation_status(){
 }
 
 get_installation_directory
+
+UTILITY_NAME="color"
 uninstall_util
 check_installation_status $?
+
+UTILITY_NAME="bgcolor"
+uninstall_util
+check_installation_status $?
+

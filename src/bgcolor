@@ -1,16 +1,16 @@
 #! /bin/bash
 : '
-   Terminal Color Utility 
+   Terminal background Color Utility 
 
     				-->   [ Author ]  Viki (a) Vignesh Natarajan 
 				-->   [ Domain ]  https://vikiworks.io 
 '
 usage(){
     echo
-    echo "Usage: color <color_name>"
+    echo "Usage: bgcolor <color_name>"
     echo
     echo
-    echo "Example: color green"
+    echo "Example: bgcolor green"
     echo
     echo "list of supported colors :"
     echo
@@ -34,7 +34,7 @@ fi
 
 SET_BG_COLOR(){
     COLOR="$1"
-    echo "PS1=\`printf \"%s\" \"\033[3${COLOR}m\u@\h\$\033[39m\"\`" >> ~/.bashrc
+    echo "PS1=\`printf \"%s\" \"\033[4${COLOR}m\u@\h\$\033[39m\"\`" >> ~/.bashrc
 }
 
 case $1 in

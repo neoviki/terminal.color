@@ -1,6 +1,6 @@
 ## Utility to change the terminal color
 
-This package change the color of linux terminal.
+This package change the forground and background color of linux terminal.
     
 ### How to install this package?
 
@@ -11,17 +11,17 @@ This package change the color of linux terminal.
 
 ### How to use this command?
 
-#### Example 1: [ Change the color of terminal to green ]
+#### Example 1: [ Change the foreground color of terminal to green ]
 
     $color green 
 
-#### Example 1: [ Change the color of terminal to purple ]
+#### Example 2: [ Change the background color of terminal to black ]
     
-    $color purple
+    $bgcolor black
 
     
 ### Tested Systems
 
     - Ubuntu
     - Mac OSX
-
+    - BusyBox

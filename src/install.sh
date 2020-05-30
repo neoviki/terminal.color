@@ -41,6 +41,10 @@ check_installation_status(){
 }
 
 get_installation_directory
+UTILITY_NAME="color"
+install_util
+check_installation_status $?
+UTILITY_NAME="bgcolor"
 install_util
 check_installation_status $?
 
